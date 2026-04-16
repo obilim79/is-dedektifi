@@ -248,14 +248,13 @@
                     generationConfig: commonGenerationConfig
                 };
 
-// Şirket araması için Google Arama aracını aktif ediyoruz
-if (useGoogleSearch) {
-    payload.tools = [{ "google_search": {} }];
-}
-
+            // Şirket araması için Google Arama aracını aktif ediyoruz
+            if (useGoogleSearch) {
+                payload.tools = [{ "googleSearch": {} }];
             }
 
-const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+
 
 
 
